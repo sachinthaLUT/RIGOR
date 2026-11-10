@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use RIGOR, please cite the paper and this repository."
+title: "RIGOR: open force-controlled compressive testing rig (design files, firmware and calibration scripts)"
+type: software
+authors:
+  - family-names: "Alwis Weerasinghe"
+    given-names: "Sachintha"
+    affiliation: "LUT University"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Kłodowski"
+    given-names: "Adam"
+    affiliation: "LAB University of Applied Sciences"
+    orcid: "https://orcid.org/0000-0002-4965-5521"
+  - family-names: "Orzechowski"
+    given-names: "Grzegorz"
+    affiliation: "LUT University"
+  - family-names: "Mikkola"
+    given-names: "Aki"
+    affiliation: "LUT University"
+version: "1.0.0"
+date-released: "2026-11-30"   # update to the release date
+license:
+  - CERN-OHL-P-2.0
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/OWNER/RIGOR"   # update
+# doi: "10.5281/zenodo.XXXXXXX"                      # add after the first Zenodo release
+keywords:
+  - open hardware
+  - force control
+  - load cell
+  - compression testing
+  - ISO 7500-1
+  - calibration
+preferred-citation:
+  type: article
+  title: "RIGOR: An Open, Reconfigurable Electric-Actuator Testing Rig for Compressive Loading"
+  authors:
+    - family-names: "Alwis Weerasinghe"
+      given-names: "Sachintha"
+    - family-names: "Kłodowski"
+      given-names: "Adam"
+    - family-names: "Orzechowski"
+      given-names: "Grzegorz"
+    - family-names: "Mikkola"
+      given-names: "Aki"
+  year: 2026
+  journal: "TBC"   # update on acceptance, add volume/doi

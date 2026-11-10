@@ -1,0 +1,45 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
+
+# Arduino / PlatformIO builds
+build/
+.pio/
+*.elf
+*.bin
+*.map
+
+# KiCad backups and caches
+*-backups/
+*.kicad_prl
+fp-info-cache
+*.lck
+_autosave-*
+*.bak
+
+# CAD lock / temp files
+~$*
+*.lck
+*.tmp
+
+# MATLAB
+*.asv
+*.mex*
+slprj/
+
+# Office lock files
+.~lock.*#
+
+# LaTeX (if you add the paper source)
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.bbl
+*.blg

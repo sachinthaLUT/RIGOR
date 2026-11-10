@@ -1,0 +1,146 @@
+(footprint "LED_HLMP-08xx_Rectangular_RG"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Broadcom HLMP-08xx 5.08x2.16mm rectangular bicolor LED, 3 leads, 1.27mm pitch, straight leads. Pin1=Red/Yellow anode (short lead), Pin2=Common cathode, Pin3=Green anode")
+	(tags "LED rectangular bicolor red green yellow HLMP-08xx THT 1.27mm")
+	(property "Reference" "REF**"
+		(at 1.27 -2.4 0)
+		(layer "F.SilkS")
+		(uuid "a17fb214-2823-43a1-8ea7-4a5dd78f392f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "LED_HLMP-08xx_Rectangular_RG"
+		(at 1.27 2.5 0)
+		(layer "F.Fab")
+		(uuid "6965ad4e-5cb4-458e-9430-bf253f14e04c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4f6e0503-256c-4011-889b-a033a2451d11")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Rectangular bicolor LED, common cathode"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "519dbb96-2452-4121-9d41-3c5371b7699c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.8 -1.315)
+		(end -1.8 1.315)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7978d832-28d6-42ab-83a5-11fc9bb2a5e9")
+	)
+	(fp_rect
+		(start -1.57 -1.315)
+		(end 4.11 1.315)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "aadb1428-be7a-44eb-8549-28e1f1b88a6d")
+	)
+	(fp_rect
+		(start -1.71 -1.46)
+		(end 4.25 1.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "6103e2fc-6c3b-4a8d-aef2-e90f6a8ad40c")
+	)
+	(fp_line
+		(start -1.46 -0.6)
+		(end -0.86 -1.205)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1fffe10f-3900-4e7f-a901-a16c31ac63c9")
+	)
+	(fp_rect
+		(start -1.46 -1.205)
+		(end 4 1.205)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "8ddddf31-17ec-41be-85b7-b34662bc3586")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 1.27 0 0)
+		(layer "F.Fab")
+		(uuid "fc4cb18c-d80a-490e-9cd1-8779cb20fe1e")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.09)
+			)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at 0 0)
+		(size 1.05 1.8)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1cd76902-0732-4f82-bceb-c3c306b2f098")
+	)
+	(pad "2" thru_hole oval
+		(at 2.54 0)
+		(size 1.05 1.8)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "dc1ad551-ffcc-4920-bf3f-ac967d063244")
+	)
+	(pad "3" thru_hole roundrect
+		(at 1.27 0)
+		(size 1.05 1.8)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.2380952381)
+		(uuid "c385c95f-1c28-479d-bbf3-aa74e004c4a7")
+	)
+	(embedded_fonts no)
+)

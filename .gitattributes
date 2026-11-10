@@ -1,0 +1,23 @@
+# Normalise line endings for text; mark binary formats explicitly.
+* text=auto
+*.ino  text
+*.cpp  text
+*.h    text
+*.md   text
+*.csv  text
+*.m    text
+*.kicad_sch text
+*.kicad_pcb text
+*.kicad_pro text
+
+*.step binary
+*.stp  binary
+*.stl  binary
+*.SLDPRT binary
+*.SLDASM binary
+*.f3d  binary
+*.xlsx binary
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.zip  binary
