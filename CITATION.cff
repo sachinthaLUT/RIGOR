@@ -1,51 +1,15 @@
 cff-version: 1.2.0
-message: "If you use RIGOR, please cite the paper and this repository."
-title: "RIGOR: Reconfigurable Electrically Actuated Testing Rig for Compressive Loading (design files, firmware and calibration data)"
+message: "If you use this work, please cite it as below."
+title: "RIGOR: open force-controlled testing rig — design files, firmware and calibration scripts"
 type: software
 authors:
-  - family-names: "Alwis Weerasinghe"
-    given-names: "Sachintha"
-    affiliation: "LUT University"
-    orcid: "https://orcid.org/0009-0002-5026-1682"
-  - family-names: "Kłodowski"
-    given-names: "Adam"
-    affiliation: "LAB University"
-    orcid: "https://orcid.org/0000-0002-4965-5521"
-  - family-names: "Orzechowski"
-    given-names: "Grzegorz"
-    affiliation: "LUT University"
-    orcid: "https://orcid.org/0000-0002-3252-1236"
-  - family-names: "Mikkola"
-    given-names: "Aki"
-    affiliation: "LUT University"
-    orcid: "https://orcid.org/0000-0003-2762-8503"
-version: "1.0.0"
-date-released: "2026-11-13"
-license:
-  - CERN-OHL-P-2.0
-  - MIT
-  - CC-BY-4.0
-repository-code: "https://github.com/sachinthaLUT/RIGOR"
-doi: "10.5281/zenodo.xxxxxx"   # add after the first Zenodo release
+  - name: "Anonymous"
+version: "2.1"
+license: <keep your licence, e.g. CERN-OHL-S-2.0 / MIT>
+abstract: >-
+  Design files, firmware, calibration harness and analysis scripts for an
+  open electromechanical compressive force-testing rig.
 keywords:
-  - open hardware
   - force control
-  - load cell
-  - compression testing
+  - open hardware
   - ISO 7500-1
-  - calibration
-  - test rig
-preferred-citation:
-  type: article
-  title: "RIGOR: Reconfigurable Electrically Actuated Testing Rig for Compressive Loading"
-  authors:
-    - family-names: "Alwis Weerasinghe"
-      given-names: "Sachintha"
-    - family-names: "Kłodowski"
-      given-names: "Adam"
-    - family-names: "Orzechowski"
-      given-names: "Grzegorz"
-    - family-names: "Mikkola"
-      given-names: "Aki"
-  year: 2026
-  # journal: "…"   # add journal, volume and doi on acceptance
