@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="360pt" height="413.0pt" viewBox="0 0 360 413.0" version="1.1">
+<defs>
+<marker id="ah" markerWidth="6" markerHeight="6" refX="5" refY="2.5" orient="auto"><path d="M0,0 6,2.5 0,5 Z" fill="#2b2b2b"/></marker>
+<marker id="ahs" markerWidth="6" markerHeight="6" refX="1" refY="2.5" orient="auto"><path d="M6,0 0,2.5 6,5 Z" fill="#2b2b2b"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="359" height="52" rx="3" ry="3" fill="#f0f0f0" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="6.5" y="11.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#6e6e6e" text-anchor="start" font-weight="bold">MECHANICAL</text>
+<rect x="8" y="15.5" width="104" height="30" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="60.0" y="29.5" font-family="Helvetica, Arial, sans-serif" font-size="8.5px" fill="#1a1a1a" text-anchor="middle" font-weight="bold">Load cell</text>
+<text x="60.0" y="38.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#454545" text-anchor="middle" font-weight="normal">100 kg, 4-wire bridge</text>
+<rect x="128" y="15.5" width="104" height="30" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0" stroke-dasharray="3,2"/>
+<text x="180.0" y="29.5" font-family="Helvetica, Arial, sans-serif" font-size="8.5px" fill="#1a1a1a" text-anchor="middle" font-weight="bold">Specimen</text>
+<text x="180.0" y="38.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#454545" text-anchor="middle" font-weight="normal">under test</text>
+<rect x="248" y="15.5" width="104" height="30" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="300.0" y="29.5" font-family="Helvetica, Arial, sans-serif" font-size="8.5px" fill="#1a1a1a" text-anchor="middle" font-weight="bold">Linear actuator</text>
+<text x="300.0" y="38.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#454545" text-anchor="middle" font-weight="normal">brushed DC, no encoder</text>
+<line x1="246" y1="30.5" x2="234" y2="30.5" stroke="#2b2b2b" stroke-width="1.1" marker-end="url(#ah)"/>
+<line x1="126" y1="30.5" x2="114" y2="30.5" stroke="#2b2b2b" stroke-width="1.1" marker-end="url(#ah)"/>
+<rect x="0.5" y="66.5" width="175.5" height="50" rx="3" ry="3" fill="#f0f0f0" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="6.5" y="77.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#6e6e6e" text-anchor="start" font-weight="bold">SENSING</text>
+<text x="6.5" y="90.5" font-family="Helvetica, Arial, sans-serif" font-size="8.5px" fill="#1a1a1a" text-anchor="start" font-weight="bold">ADS1220  24-bit ADC</text>
+<text x="6.5" y="100.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#454545" text-anchor="start" font-weight="normal">ratiometric, 350 SPS, 20 ms mean</text>
+<text x="6.5" y="110.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#454545" text-anchor="start" font-weight="normal">ACS773 current · NTC driver temp</text>
+<rect x="184.0" y="66.5" width="175.5" height="50" rx="3" ry="3" fill="#f0f0f0" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="190.0" y="77.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#6e6e6e" text-anchor="start" font-weight="bold">DRIVE</text>
+<text x="190.0" y="90.5" font-family="Helvetica, Arial, sans-serif" font-size="8.5px" fill="#1a1a1a" text-anchor="start" font-weight="bold">Pololu G2 18v25</text>
+<text x="190.0" y="100.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#454545" text-anchor="start" font-weight="normal">PWM 20 kHz + DIR</text>
+<text x="190.0" y="110.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#454545" text-anchor="start" font-weight="normal">e-stop · driver fault pin · buzzer</text>
+<line x1="60.0" y1="53.5" x2="60.0" y2="65.5" stroke="#2b2b2b" stroke-width="1.1" marker-end="url(#ah)"/>
+<text x="64.0" y="62.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#6e6e6e" text-anchor="start" font-weight="normal">mV</text>
+<line x1="300.0" y1="65.5" x2="300.0" y2="53.5" stroke="#2b2b2b" stroke-width="1.1" marker-end="url(#ah)"/>
+<text x="304.0" y="62.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#6e6e6e" text-anchor="start" font-weight="normal">power</text>
+<rect x="0.5" y="130.5" width="359" height="78" rx="3" ry="3" fill="#e3e9f0" stroke="#2b2b2b" stroke-width="1.4"/>
+<text x="6.5" y="141.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#6e6e6e" text-anchor="start" font-weight="bold">RIG CONTROLLER</text>
+<text x="353.5" y="141.5" font-family="Helvetica, Arial, sans-serif" font-size="7.5px" fill="#454545" text-anchor="end" font-weight="normal">Arduino Nano ESP32</text>
+<rect x="8" y="147.5" width="168.5" height="27" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="13" y="158.5" font-family="Helvetica, Arial, sans-serif" font-size="8.5px" fill="#1a1a1a" text-anchor="start" font-weight="bold">Force control</text>
+<text x="13" y="168.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#454545" text-anchor="start" font-weight="normal">PI at 50 Hz, hold band, fine-zone pulses</text>
+<rect x="182.5" y="147.5" width="168.5" height="27" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="187.5" y="158.5" font-family="Helvetica, Arial, sans-serif" font-size="8.5px" fill="#1a1a1a" text-anchor="start" font-weight="bold">Safety (latched)</text>
+<text x="187.5" y="168.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#454545" text-anchor="start" font-weight="normal">overload, current, temp, stall, e-stop</text>
+<rect x="8" y="177.5" width="168.5" height="27" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="13" y="188.5" font-family="Helvetica, Arial, sans-serif" font-size="8.5px" fill="#1a1a1a" text-anchor="start" font-weight="bold">Command parser</text>
+<text x="13" y="198.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#454545" text-anchor="start" font-weight="normal">validates every received line</text>
+<rect x="182.5" y="177.5" width="168.5" height="27" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="187.5" y="188.5" font-family="Helvetica, Arial, sans-serif" font-size="8.5px" fill="#1a1a1a" text-anchor="start" font-weight="bold">Telemetry</text>
+<text x="187.5" y="198.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#454545" text-anchor="start" font-weight="normal">4 / 20 / 50 Hz, HMI watchdog</text>
+<line x1="60.0" y1="117.5" x2="60.0" y2="129.5" stroke="#2b2b2b" stroke-width="1.1" marker-end="url(#ah)"/>
+<text x="64.0" y="126.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#6e6e6e" text-anchor="start" font-weight="normal">counts</text>
+<line x1="300.0" y1="129.5" x2="300.0" y2="117.5" stroke="#2b2b2b" stroke-width="1.1" marker-end="url(#ah)"/>
+<text x="304.0" y="126.5" font-family="Helvetica, Arial, sans-serif" font-size="7px" fill="#6e6e6e" text-anchor="start" font-weight="normal">PWM / DIR</text>
+<rect x="0.5" y="218.5" width="359" height="50" rx="3" ry="3" fill="#fbf0da" stroke="#2b2b2b" stroke-width="1.2"/>
+<text x="6.5" y="229.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#6e6e6e" text-anchor="start" font-weight="bold">SERIAL LINK</text>
+<text x="353.5" y="229.5" font-family="Helvetica, Arial, sans-serif" font-size="7.5px" fill="#454545" text-anchor="end" font-weight="normal">UART 115 200 baud · rig D0/D1 to HMI GPIO 17/18</text>
+<line x1="10" y1="245.5" x2="350" y2="245.5" stroke="#2b2b2b" stroke-width="1.1" marker-end="url(#ah)"/>
+<text x="180.0" y="242.5" font-family="'Courier New', monospace" font-size="7.2px" fill="#1a1a1a" text-anchor="middle" font-weight="normal">T F= tgt= pwm= reg= st= I= Td= es= df= eot= N= [flt=]</text>
+<line x1="350" y1="261.5" x2="10" y2="261.5" stroke="#2b2b2b" stroke-width="1.1" marker-end="url(#ah)"/>
+<text x="180.0" y="258.5" font-family="'Courier New', monospace" font-size="7.2px" fill="#1a1a1a" text-anchor="middle" font-weight="normal">H&lt;kg&gt; S Z R B + − Q W&lt;0|1&gt; E&lt;0|1&gt; V&lt;0–2&gt; F&lt;hz&gt; P</text>
+<text x="10" y="242.5" font-family="Helvetica, Arial, sans-serif" font-size="6.5px" fill="#6e6e6e" text-anchor="start" font-weight="normal">telemetry ↓</text>
+<text x="350" y="258.5" font-family="Helvetica, Arial, sans-serif" font-size="6.5px" fill="#6e6e6e" text-anchor="end" font-weight="normal">commands ↑</text>
+<line x1="180.0" y1="209.5" x2="180.0" y2="217.5" stroke="#2b2b2b" stroke-width="1.1" marker-end="url(#ah)" marker-start="url(#ahs)"/>
+<rect x="0.5" y="278.5" width="359" height="78" rx="3" ry="3" fill="#dde7f3" stroke="#2b2b2b" stroke-width="1.4"/>
+<text x="6.5" y="289.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#6e6e6e" text-anchor="start" font-weight="bold">HMI CONTROLLER</text>
+<text x="353.5" y="289.5" font-family="Helvetica, Arial, sans-serif" font-size="7.5px" fill="#454545" text-anchor="end" font-weight="normal">ESP32-S3 · LVGL v8</text>
+<rect x="8" y="295.5" width="110.33333333333333" height="27" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="13" y="306.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#1a1a1a" text-anchor="start" font-weight="bold">Link + app state</text>
+<text x="13" y="316.5" font-family="Helvetica, Arial, sans-serif" font-size="6.5px" fill="#454545" text-anchor="start" font-weight="normal">stale data never shown live</text>
+<rect x="124.33333333333333" y="295.5" width="110.33333333333333" height="27" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="129.33333333333331" y="306.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#1a1a1a" text-anchor="start" font-weight="bold">User interface</text>
+<text x="129.33333333333331" y="316.5" font-family="Helvetica, Arial, sans-serif" font-size="6.5px" fill="#454545" text-anchor="start" font-weight="normal">6 screens, touch control</text>
+<rect x="240.66666666666666" y="295.5" width="110.33333333333333" height="27" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="245.66666666666666" y="306.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#1a1a1a" text-anchor="start" font-weight="bold">Test sequencers</text>
+<text x="245.66666666666666" y="316.5" font-family="Helvetica, Arial, sans-serif" font-size="6.5px" fill="#454545" text-anchor="start" font-weight="normal">stepped, square wave</text>
+<rect x="8" y="325.5" width="110.33333333333333" height="27" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="13" y="336.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#1a1a1a" text-anchor="start" font-weight="bold">Settings</text>
+<text x="13" y="346.5" font-family="Helvetica, Arial, sans-serif" font-size="6.5px" fill="#454545" text-anchor="start" font-weight="normal">units, buzzer, profiles (NVS)</text>
+<rect x="124.33333333333333" y="325.5" width="110.33333333333333" height="27" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="129.33333333333331" y="336.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#1a1a1a" text-anchor="start" font-weight="bold">Data logger</text>
+<text x="129.33333333333331" y="346.5" font-family="Helvetica, Arial, sans-serif" font-size="6.5px" fill="#454545" text-anchor="start" font-weight="normal">CSV per test to microSD</text>
+<rect x="240.66666666666666" y="325.5" width="110.33333333333333" height="27" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="245.66666666666666" y="336.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#1a1a1a" text-anchor="start" font-weight="bold">Web server</text>
+<text x="245.66666666666666" y="346.5" font-family="Helvetica, Arial, sans-serif" font-size="6.5px" fill="#454545" text-anchor="start" font-weight="normal">Wi-Fi SoftAP download</text>
+<line x1="180.0" y1="269.5" x2="180.0" y2="277.5" stroke="#2b2b2b" stroke-width="1.1" marker-end="url(#ah)" marker-start="url(#ahs)"/>
+<rect x="0.5" y="366.5" width="359" height="46" rx="3" ry="3" fill="#e6efe6" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="6.5" y="377.5" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#6e6e6e" text-anchor="start" font-weight="bold">OPERATOR &amp; DATA OUT</text>
+<rect x="8" y="381.5" width="110.33333333333333" height="25" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="63.166666666666664" y="393.0" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#1a1a1a" text-anchor="middle" font-weight="bold">5" touchscreen</text>
+<text x="63.166666666666664" y="402.0" font-family="Helvetica, Arial, sans-serif" font-size="6.5px" fill="#454545" text-anchor="middle" font-weight="normal">800×480, capacitive</text>
+<rect x="124.33333333333333" y="381.5" width="110.33333333333333" height="25" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="179.5" y="393.0" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#1a1a1a" text-anchor="middle" font-weight="bold">microSD card</text>
+<text x="179.5" y="402.0" font-family="Helvetica, Arial, sans-serif" font-size="6.5px" fill="#454545" text-anchor="middle" font-weight="normal">FAT32, one CSV per test</text>
+<rect x="240.66666666666666" y="381.5" width="110.33333333333333" height="25" rx="3" ry="3" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.0"/>
+<text x="295.8333333333333" y="393.0" font-family="Helvetica, Arial, sans-serif" font-size="8px" fill="#1a1a1a" text-anchor="middle" font-weight="bold">Phone / laptop</text>
+<text x="295.8333333333333" y="402.0" font-family="Helvetica, Arial, sans-serif" font-size="6.5px" fill="#454545" text-anchor="middle" font-weight="normal">browser download</text>
+<line x1="180.0" y1="357.5" x2="180.0" y2="365.5" stroke="#2b2b2b" stroke-width="1.1" marker-end="url(#ah)"/>
+</svg>

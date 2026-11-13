@@ -1,12 +1,7 @@
 (fp_lib_table
 	(version 7)
 	(lib (name "AD1220") (type "KiCad") (uri "${KIPRJMOD}/libraries/Footprints/AD1220.pretty") (options "") (descr ""))
-	(lib (name "ATOLoadCell") (type "KiCad") (uri "${KIPRJMOD}/libraries/Footprints/ATOLoadCell.pretty") (options "") (descr ""))
-	(lib (name "CytronMD20A") (type "KiCad") (uri "${KIPRJMOD}/libraries/Footprints/CytronMD20A.pretty") (options "") (descr ""))
-	(lib (name "SolderPad") (type "KiCad") (uri "${KIPRJMOD}/libraries/Footprints/SolderPad.pretty") (options "") (descr ""))
 	(lib (name "TSR_2_2450") (type "KiCad") (uri "${KIPRJMOD}/libraries/Footprints/TSR_2_2450.pretty") (options "") (descr ""))
-	(lib (name "LP2950_3_3") (type "KiCad") (uri "${KIPRJMOD}/libraries/Footprints/LP2950_3_3.pretty") (options "") (descr ""))
-	(lib (name "LP2950_5") (type "KiCad") (uri "${KIPRJMOD}/libraries/Footprints/LP2950_5.pretty") (options "") (descr ""))
 	(lib (name "Mini_ATM_Fuse_Holder") (type "KiCad") (uri "${KIPRJMOD}/libraries/Footprints/Mini_ATM_Fuse_Holder.pretty") (options "") (descr ""))
 	(lib (name "Polulu_18_V_25") (type "KiCad") (uri "${KIPRJMOD}/libraries/Footprints/Polulu_18_V_25.pretty") (options "") (descr ""))
 	(lib (name "ACS773LCB-050B-PFF-T_ALM") (type "KiCad") (uri "${KIPRJMOD}/libraries/Footprints/ACS773LCB-050B-PFF-T_ALM.pretty") (options "") (descr ""))

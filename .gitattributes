@@ -6,18 +6,26 @@
 *.md   text
 *.csv  text
 *.m    text
+*.svg  text
 *.kicad_sch text
 *.kicad_pcb text
 *.kicad_pro text
+*.kicad_sym text
+*.kicad_mod text
+*.gbr  text
+*.drl  text
 
 *.step binary
 *.stp  binary
 *.stl  binary
+*.3mf  binary
+*.3MF  binary
 *.SLDPRT binary
 *.SLDASM binary
-*.f3d  binary
+*.SLDDRW binary
 *.xlsx binary
 *.pdf  binary
+*.PDF  binary
 *.png  binary
 *.jpg  binary
 *.zip  binary

@@ -1,26 +1,33 @@
 # Mechanical design
 
-| Folder | Contents | Format |
-|---|---|---|
-| [`cad/`](cad) | Native CAD assembly and parts, for editing | TBC (e.g. SolidWorks / Fusion / FreeCAD) |
-| [`step/`](step) | Neutral 3D models of the assembly and every custom part | STEP AP214 |
-| [`drawings/`](drawings) | 2D manufacturing drawings of the custom parts | PDF |
-| [`stl/`](stl) | Printable parts (enclosure, bezels, covers) | STL |
+All CAD is in SolidWorks. Neutral exports (STEP, PDF) are listed below so the
+rig can be built without SolidWorks.
+
+| Path | Contents |
+|---|---|
+| [`cad/Portable Rig.zip`](cad) | Rig assembly `Portable Rig.SLDASM` with all custom parts, the actuator and the load cell |
+| [`cad/Enclosure Assembly.zip`](cad) | Control enclosure: `Body.SLDPRT`, `Lid.SLDPRT`, e-stop model |
+| [`drawings/`](drawings) | Manufacturing drawings of the custom parts (`.SLDDRW`; PDF exports in `drawings/pdf/`) |
+| [`step/`](step) | STEP AP214 exports of the rig assembly and each custom part |
+| [`3mf/`](3mf) | Print files for the enclosure body and lid |
 
 ## Custom parts
 
-| ID | Part | Process | Material |
-|---|---|---|---|
-| M5 | Actuator rear bracket | TBC (machined / laser-cut) | TBC |
-| M6 | Actuator front support | TBC | TBC |
-| M7 | Loading tup | Turned | TBC |
-| M8 | Reaction plate | TBC | TBC |
-| E12 | Electronics enclosure | FDM print | TBC |
+| Drawing | Part | BOM line | Process | Material |
+|---|---|---|---|---|
+| Actuator bracket 1 | Actuator rear bracket (clevis mount) | E4 | CNC | TBC |
+| Actuator bracket 2 + BracketLid | Actuator front support and its clamp | E5 | CNC | TBC |
+| LoadCellActuatorBracket | Actuator rod to load cell adaptor (M6) | E6 | CNC | TBC |
+| LoadCellPusher | Loading tup (M6) | E7 | Turned | TBC |
+| Force plate | Reaction plate | E8 | CNC | TBC |
+| Enclosure Body / Lid | Control enclosure | D2 | FDM print | TBC |
 
-## Conventions
+Bought parts (T-slot profiles, gussets, fasteners) are listed in
+[`../bom`](../bom).
 
-- File names: `RIG-<ID>_<name>_r<rev>.<ext>`, e.g. `RIG-M7_tup_r1.step`.
-- One STEP of the full assembly: `RIG-ASM_rigor_r1.step`.
-- Drawings show only what a workshop needs: critical dimensions, threads,
-  tolerances on the load-line features (co-axiality of rod, cell and tup).
+## Notes
+
 - Units: millimetres.
+- Critical features are those on the load line: the actuator rod, adaptor,
+  load cell and tup must be co-axial, and the reaction-plate face square to the
+  rail. See [`../../docs/assembly.md`](../../docs/assembly.md).

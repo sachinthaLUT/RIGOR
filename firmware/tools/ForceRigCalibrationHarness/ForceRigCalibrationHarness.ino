@@ -3,8 +3,8 @@
  *  For Force Rig PCB rev 2 (Pololu G2 18v25, ACS773 current sensor,
  *  driver NTC, e-stop sense, ratiometric ADS1220).
  *
- *  Companion workbook:  Force_Rig_Calibration_Workbook_V1.xlsx
- *  Load-cell constants: Load_Cell_Calibration_Data_V1.xlsx (UTM session)
+ *  Companion workbook:  calibration/Force_Rig_Calibration_Workbook.xlsx
+ *  Load-cell constants: calibration/Load_Cell_Calibration_Data.xlsx (UTM session)
  * =====================================================================
  *
  *  WHAT THIS IS
@@ -16,7 +16,7 @@
  *  Not the operational firmware. It has no touchscreen link, logs raw
  *  counts as well as kg, and can log at the full control rate. The control
  *  law, limits and protective functions are the SAME as
- *  Force_Control_Rig_V3 rev 5, so the numbers describe the machine as run.
+ *  Force_Control_Rig_V4 (rig firmware rev 6), so the numbers describe the machine as run.
  *
  *  HOW RESULTS GET INTO THE WORKBOOK
  *  ---------------------------------
@@ -57,7 +57,7 @@
 #define FW_VERSION "Harness V1"
 
 // =====================================================================
-//  PINS  (Force_Rig_PCB rev 2 — identical to the rig firmware rev 5)
+//  PINS  (controller PCB V2.1 — identical to the rig firmware rev 6.2)
 // =====================================================================
 #define ADS1220_CS_PIN     D10
 #define ADS1220_DRDY_PIN   D9
@@ -86,7 +86,7 @@ double CAL_SLOPE_KG_PER_COUNT = 0.000058327734; // UTM 2026-10-15, rounds 1-3, l
 double CAL_INTERCEPT_KG       = 0.145367338;    // UTM 2026-10-15, rounds 1-3, linear 0-100 kg (LC_Reference)
 
 // =====================================================================
-//  LIMITS AND CONTROL — identical to Force_Control_Rig_V3 rev 5
+//  LIMITS AND CONTROL — identical to Force_Control_Rig_V4 (rev 6)
 // =====================================================================
 const double CELL_RATING_KG    = 100.0;
 const double OVERLOAD_TRIP_KG  = 95.0;
@@ -716,7 +716,7 @@ void pasteProtocol(const char* sheet, const char* cell, int rows, void (*printer
 void pasteTable() { pasteProtocol(tblSheet, tblCell, tblRows, tblPrinter); }
 
 // =====================================================================
-//  CONTROL — identical law to Force_Control_Rig_V3 rev 5
+//  CONTROL — identical law to Force_Control_Rig_V4 (rev 6)
 // =====================================================================
 double computeControl(double f) {
   if (targetKg < CONTACT_ENTER_KG)          regime = REG_CONTACT;
@@ -1844,7 +1844,7 @@ void setup() {
   Serial.print(MOTOR_PWM_BITS); Serial.println(pwmOk ? F("-bit, OK") : F("-bit, SETUP FAILED - the motor cannot be driven"));
   bool ok = adsInit();
   Serial.print(F("ADS1220:        ")); Serial.println(ok ? F("register readback OK") : F("NO RESPONSE - check SPI/power"));
-  Serial.print(F("Reference:      ")); Serial.println(ADS_RATIOMETRIC ? F("ratiometric (matches rig rev 5)") : F("internal 2.048 V"));
+  Serial.print(F("Reference:      ")); Serial.println(ADS_RATIOMETRIC ? F("ratiometric (matches rig firmware)") : F("internal 2.048 V"));
   currentZero();
   for (int i = 0; i < 20; i++) sampleTemperature();
   long c = readRawCounts(); readForceKgFiltered();

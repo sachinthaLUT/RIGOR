@@ -1,5 +1,5 @@
 /* =====================================================================
- *  RIGOR  --  HMI (touchscreen) firmware v1.3.0
+ *  RIGOR  --  HMI (touchscreen) firmware v1.3.1
  *  Runs on the display ESP32-S3. Talks to the actuator ESP32 over Serial1.
  *
  *  This file is a REFERENCE for the two things the UI needs from you:

@@ -1,31 +1,35 @@
 # Electronics
 
-Controller PCB **V2.1** carries the microcontroller, the load-cell ADC, current
-and temperature sensing, and the connectors for the motor driver, actuator,
-e-stop and touchscreen link.
+The controller PCB carries the Arduino Nano ESP32, the Olimex BB-ADS1220
+load-cell ADC, the ACS773 current sensor, the Pololu G2 18v25 motor driver,
+the driver thermistor, buzzer, status LED and the connectors for the
+actuator, load cell, e-stop, supply and touchscreen.
 
-![PCB V2.1](../../docs/images/pcb_v2.1.jpg)
+![Controller PCB V2.1](../../photos/pcb_v2.1.jpg)
+
+## Board revisions
+
+| Revision | Silkscreen | Status | Files |
+|---|---|---|---|
+| **V2.1** | `V2.1 240926` | **Built and characterised in the paper** | [`gerbers/RIGOR_PCB_V2.1_gerbers.zip`](gerbers) |
+| V2.2 | `V2.2 151026` | Current KiCad project; touchscreen UART connector J2 re-pinned. Not yet fabricated or tested. | [`kicad/Force_Rig_PCB_V2`](kicad/Force_Rig_PCB_V2), [`gerbers/RIGOR_PCB_V2.2_gerbers.zip`](gerbers) |
+
+To reproduce the rig as published, order **V2.1**. Check J2 against
+[`../../docs/wiring.md`](../../docs/wiring.md) if you build V2.2.
+
+## Contents
 
 | Path | Contents |
 |---|---|
-| [`kicad/`](kicad) | KiCad project (`.kicad_pro`, `.kicad_sch`, `.kicad_pcb`) and project libraries |
-| [`gerbers/`](gerbers) | Fabrication outputs, zipped, ready to upload to a PCB fab |
-| `schematic.pdf` | Schematic, for reading without KiCad |
-| `pcb_bom.csv` | PCB component list with values, footprints and manufacturer part numbers |
-| `positions.csv` | Pick-and-place file (only if you order assembly) |
-| [`datasheets/`](datasheets) | Links to key datasheets (do not commit PDFs you may not redistribute) |
+| [`kicad/Force_Rig_PCB_V2/`](kicad/Force_Rig_PCB_V2) | KiCad project (schematic, layout, project libraries), PCB renders, current calculations, 3D model of the board in its enclosure |
+| [`gerbers/`](gerbers) | Fabrication files, one zip per revision, ready to upload to a PCB fab (built with JLCPCB) |
+| `Force_Rig_PCB_schematic.pdf` | Schematic for reading without KiCad (in `kicad/Force_Rig_PCB_V2/`) |
+| [`datasheets/`](datasheets) | Datasheets and vendor documents for the main parts |
 
 Board-to-board and off-board wiring: [`../../docs/wiring.md`](../../docs/wiring.md).
+Component list with prices: [`../bom`](../bom).
 
-## Exporting from KiCad
+## Next revision
 
-1. **Schematic PDF:** Schematic editor → File → Plot → PDF.
-2. **Gerbers + drill:** PCB editor → File → Fabrication Outputs → Gerbers, then
-   Drill Files. Zip the folder as `gerbers/RIGOR_PCB_V2.1_gerbers.zip`.
-3. **BOM:** Schematic editor → Tools → Generate BOM (CSV) → `pcb_bom.csv`.
-4. **Positions:** PCB editor → File → Fabrication Outputs → Component Placement.
-
-## Known issues / next revision
-
-- Wi-Fi antenna of the Nano ESP32 should sit clear of copper pours and the enclosure wall.
-- Component values to be printed on the silkscreen legend.
+- Keep the Nano ESP32's Wi-Fi antenna clear of copper pours and the enclosure wall.
+- Print component values on the silkscreen.

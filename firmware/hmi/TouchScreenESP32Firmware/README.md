@@ -1,97 +1,72 @@
-| Supported ESP SoCs | ESP32 | ESP32-C3 | ESP32-C6 | ESP32-H2 | ESP32-S2 | ESP32-S3 | ESP32-P4 |
-| ------------------ | ----- | -------- | -------- | -------- | -------- | -------- | -------- |
+# RIGOR touchscreen firmware (v1.3.1)
 
-# LVGL Simple Porting Example
+User interface for the RIGOR rig, written in plain LVGL v8 C++ for the
+**Sunton ESP32-8048S050** (ESP32-S3, 5-inch 800×480 RGB panel, GT911
+capacitive touch, microSD slot). It sequences the tests, shows live force,
+logs force against time to the microSD card and serves the logs over its own
+Wi-Fi access point. It drives the rig over UART; it does not control the
+actuator itself.
 
-## Overview
+![Screens](../../../docs/images/touchscreen_screens.png)
 
-This example demonstrates how to port `LVGL v8`. And for `RGB/MIPI-DSI` interface LCDs, it can enable the avoid tearing and rotation function.
+Design mock-ups of every screen are in [`mockups/`](mockups).
 
-## How to Use
+## Libraries (Arduino Library Manager)
 
-### Step 1. Install SDK and dependencies
+| Library | Version used |
+|---|---|
+| esp32 board package (Espressif) | TBC |
+| ESP32_Display_Panel | TBC |
+| ESP32_IO_Expander | TBC |
+| esp-lib-utils | TBC |
+| lvgl | 8.x (TBC) |
 
-- Install the following SDK and library dependencies:
+SD, SPI, WiFi and WebServer come with the esp32 board package.
 
-  - See [SDK & Dependencies](../../../../../docs/envs/use_with_arduino.md#sdk--dependencies) and [Installing Libraries](../../../../../docs/envs/use_with_arduino.md#installing-libraries) sections for more information
+## Configuration files
 
-- Install the following example dependencies:
+| File | Where it goes |
+|---|---|
+| `lv_conf.h` | Copy to your Arduino **libraries** folder, next to the `lvgl` folder (e.g. `Documents/Arduino/libraries/lv_conf.h`). LVGL reads it from there, not from the sketch folder. It enables the Montserrat fonts the UI uses and `LV_USE_SNAPSHOT`. |
+| `esp_panel_board_custom_conf.h`, `esp_panel_board_supported_conf.h`, `esp_panel_drivers_conf.h`, `esp_utils_conf.h` | Stay in the sketch folder. They describe the Sunton ESP32-8048S050 (ST7262 RGB panel, GT911 touch). |
+| `lvgl_v8_port.h/.cpp` | Stay in the sketch folder (LVGL port from the ESP32_Display_Panel examples). |
 
-  - `lvgl`: v8.4.0
+## Board settings (Tools menu)
 
-### Step 2. Configure the libraries
+![Arduino upload settings](Touch%20Screen%20Arduino%20Upload%20Settings.png)
 
-- [Mandatory] `ESP32_Display_Panel`:
+| Setting | Value |
+|---|---|
+| Board | ESP32S3 Dev Module |
+| USB CDC On Boot | **Enabled** (required) |
+| CPU Frequency | 240 MHz |
+| Flash Mode | QIO 80 MHz |
+| Flash Size | 8 MB (16 MB on N16R8 modules) |
+| PSRAM | **OPI PSRAM** (required) |
+| Partition Scheme | 8M with spiffs (3MB APP) or Huge APP |
+| Arduino Runs On / Events On | Core 1 |
+| Upload Speed | 921600 (115200 if uploads fail) |
+| USB Mode | Hardware CDC and JTAG |
 
-  - This example already has the [esp_panel_board_supported_conf.h](./esp_panel_board_supported_conf.h) and [esp_panel_board_custom_conf.h](./esp_panel_board_custom_conf.h) configuration files in the project directory. But no board configuration enabled by default, before compiling, please edit the configuration file according to your target board:
+## Options in the source
 
-    - **If using a [supported board](../../../../../README.md#supported-boards)**, edit the *esp_panel_board_supported_conf.h* file and set `ESP_PANEL_BOARD_DEFAULT_USE_SUPPORTED` to `1`. Then uncomment the target board definition in the file
-    - **If using a custom board**, edit the *esp_panel_board_custom_conf.h* file and set `ESP_PANEL_BOARD_DEFAULT_USE_CUSTOM` to `1`. Then change other configurations as needed in the file
+| Where | Option |
+|---|---|
+| `TouchScreenESP32Firmware.ino`, line 80 | `lv_disp_set_rotation(..., LV_DISP_ROT_180)`: the panel is mounted upside down in the enclosure. Remove for a normal mounting. |
+| `TouchScreenESP32Firmware.ino` | `ENABLE_SCREENSHOTS` (default 0). With 1, typing `p` in the serial monitor saves the screen as a BMP to `/shots` on the SD card. |
+| `src/app/webserver.h` | Wi-Fi access-point name and password. **Change the password.** |
+| `src/link/link.cpp` | UART pins (TX GPIO 17, RX GPIO 18) and baud rate. Do not use GPIO 43/44: the ESP32-S3 boot log appears there. |
+| `src/ui/ui.h` | `HMI_FW_VERSION`, shown on the About screen and the download page. |
 
-  - This example already has the [esp_panel_drivers_conf.h](./esp_panel_drivers_conf.h) configuration file in the project directory. Edit this file as needed.
-  - see [Board Configuration Guide](../../../../../docs/envs/use_with_arduino.md#configuration-guide) for more information
+## Source layout
 
-- [Optional] `esp-lib-utils` :
-
-  - This example already has the [esp_utils_conf.h](./esp_utils_conf.h) configuration file in the project directory. Edit this file as needed
-  - See [Configuring esp-lib-utils](../../../../../docs/envs/use_with_arduino.md#configuring-esp-lib-utils) section for more information
-
-- [Optional] `lvgl` :
-
-  - This example already has the [lv_conf.h](./lv_conf.h) configuration file which been modified with the recommended configurations in the project directory
-  - Change the `LV_COLOR_16_SWAP` macro definition to `1` if using `SPI/QSPI` interface, or `0` if using other interfaces
-  - Change other configurations in the file as needed
-  - See [Configuring LVGL](../../../../../docs/envs/use_with_arduino.md#configuring-lvgl) section for more information
-
-### Step 3. Configure the example
-
-- [Optional] Edit the macro definitions in the [lvgl_v8_port.h](./lvgl_v8_port.h) file
-
-  - **If using `RGB/MIPI-DSI` interface**, change the `LVGL_PORT_AVOID_TEARING_MODE` macro definition to `1`/`2`/`3` to enable the avoid tearing function. After that, change the `LVGL_PORT_ROTATION_DEGREE` macro definition to the target rotation degree
-  - **If using other interfaces**, please don't modify the `LVGL_PORT_AVOID_TEARING_MODE` and `LVGL_PORT_ROTATION_DEGREE` macro definitions
-
-### Step 4. Configure Arduino IDE
-
-- Navigate to the `Tools` menu
-- Select the target board in the `Board` menu
-- Change the `Partition Scheme` and `Flash Size` to make the flash size enough for the project (like `Huge App` + `4MB`)
-- Change the `PSRAM` option to `OPI PSRAM` if using `ESP32S3R8 + RGB LCD`, or `Enabled` if using `ESP32P4 + MIPI-DSI LCD`
-- Change the `USB CDC On Boot` option to `Enabled` if using `USB` port, or `Disabled` if using `UART` port. If this configuration differs from previous flashing, first enable `Erase All Flash Before Sketch Upload`, then it can be disabled after flashing.
-- Change other configurations as needed
-- see [Configuring Arduino IDE](../../../../../docs/envs/use_with_arduino.md#configuring-arduino-ide) for more information
-
-### Step 5. Compile and upload the project
-
-- Connect the board to your computer
-- Select the correct serial port
-- Click the `upload` button
-
-### Step 6. Check the serial output
-
-- Open the serial monitor and select the correct baud rate (like `115200`)
-- Check the output logs
-
-## Serial Output
-
-The following are the logs output when using the `Espressif:ESP32_S3_LCD_EV_BOARD_2_V1_5` development board. The logs content may vary with different development boards or different configurations, and it is provided for reference only.
-
-```bash
-...
-Initializing board
-[I][Panel][esp_panel_board.cpp:0066](init): Initializing board (Espressif:ESP32_S3_LCD_EV_BOARD_2_V1_5)
-[I][Panel][esp_panel_board.cpp:0235](init): Board initialize success
-[I][Panel][esp_panel_board.cpp:0253](begin): Beginning board (Espressif:ESP32_S3_LCD_EV_BOARD_2_V1_5)
-[I][Panel][esp_lcd_touch_gt1151.c:0050](esp_lcd_touch_new_i2c_gt1151): version: 1.0.5
-[I][Panel][esp_lcd_touch_gt1151.c:0234](read_product_id): IC version: GT1158_000101(Patch)_0102(Mask)_00(SensorID)
-[I][Panel][esp_panel_board.cpp:0459](begin): Board begin success
-Initializing LVGL
-[I][LvPort][lvgl_v8_port.cpp:0769](lvgl_port_init): Initializing LVGL display driver
-Creating UI
-IDLE loop
-IDLE loop
-...
+```
+TouchScreenESP32Firmware.ino   board and LVGL bring-up, backlight, main loop
+src/app/    state (shared rig state), datalog (microSD), webserver (Wi-Fi download),
+            screenshot, hal (backlight hook)
+src/link/   UART link to the rig: commands out, telemetry in, reconnect handling
+src/ui/     screens (splash, home, static, stepped, dynamic, calibration,
+            diagnosis, settings, about), theme, widgets, e-stop overlay, logo
 ```
 
-## Troubleshooting
-
-Please check the [FAQ](../../../../../docs/envs/use_with_arduino.md#faq) first to see if the same question exists. If not, please create a [Github Issue](https://github.com/esp-arduino-libs/ESP32_Display_Panel/issues). We will get back to you as soon as possible.
+Build and design notes: [`BUILD_NOTES.md`](BUILD_NOTES.md).

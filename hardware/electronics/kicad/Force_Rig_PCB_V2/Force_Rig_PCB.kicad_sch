@@ -5,9 +5,9 @@
 	(uuid "4ba01478-5bac-4c94-b42a-ab8b7480dda8")
 	(paper "A3")
 	(title_block
-		(title "Force Rig PCB")
-		(date "2026-09-06")
-		(rev "2")
+		(title "RIGOR Controller PCB")
+		(date "2026-10-15")
+		(rev "2.2")
 		(company "LUT University")
 	)
 	(lib_symbols

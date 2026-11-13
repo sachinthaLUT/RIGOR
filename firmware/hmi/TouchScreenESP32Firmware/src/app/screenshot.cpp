@@ -5,9 +5,10 @@
 #include <lvgl.h>
 #include "../../lvgl_v8_port.h"
 
-#if !LV_USE_SNAPSHOT
-#error "screenshot.cpp needs  #define LV_USE_SNAPSHOT 1  in lv_conf.h"
-#endif
+// Needs  #define LV_USE_SNAPSHOT 1  in the lv_conf.h that LVGL itself uses
+// (Arduino/libraries/lv_conf.h, next to the lvgl folder). Without it this file
+// still compiles, but 'p' only prints a reminder instead of saving a BMP.
+#if LV_USE_SNAPSHOT
 
 static const char* SHOT_DIR = "/shots";
 
@@ -138,3 +139,25 @@ void screenshot_arm_splash(unsigned delay_ms) {
     lv_timer_t* t = lv_timer_create(splash_cb, delay_ms, nullptr);
     lv_timer_set_repeat_count(t, 1);
 }
+
+#else   // ---- LV_USE_SNAPSHOT is 0: stubs, so the sketch still builds --------
+
+static void shot_disabled() {
+    Serial.println("[shot] Disabled: set  #define LV_USE_SNAPSHOT 1  in "
+                   "Arduino/libraries/lv_conf.h and rebuild.");
+}
+bool screenshot_take_locked(char* out, size_t outlen) {
+    if (out && outlen) out[0] = '\0';
+    shot_disabled();
+    return false;
+}
+bool screenshot_take(char* out, size_t outlen) { return screenshot_take_locked(out, outlen); }
+void screenshot_poll() {
+    while (Serial.available()) {
+        const char c = Serial.read();
+        if (c == 'p' || c == 'P') shot_disabled();
+    }
+}
+void screenshot_arm_splash(unsigned) {}
+
+#endif  // LV_USE_SNAPSHOT

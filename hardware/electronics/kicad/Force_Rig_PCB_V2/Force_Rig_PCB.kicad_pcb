@@ -8,9 +8,9 @@
 	)
 	(paper "A4")
 	(title_block
-		(title "Force Testing Rig")
-		(date "2026-04-21")
-		(rev "2.0")
+		(title "RIGOR Controller PCB")
+		(date "2026-10-15")
+		(rev "2.2")
 		(company "LUT University")
 	)
 	(layers

@@ -4,7 +4,7 @@
 // ===========================================================================
 //  LINK  --  Serial1 connection to the actuator (rig) ESP32.
 //
-//  PROTOCOL (matches Force_Control_Rig_V3.ino, rev 5)
+//  PROTOCOL (matches Force_Control_Rig_V4.ino, firmware rev 6.2)
 //
 //  HMI -> RIG   single-line ASCII commands:
 //                   H<kg>   hold/seek a target force, e.g. "H20"
