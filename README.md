@@ -100,13 +100,6 @@ Citation metadata is in [`CITATION.cff`](CITATION.cff) (GitHub shows a
 See [`LICENSE.md`](LICENSE.md). Third-party libraries and manufacturer
 datasheets keep their own terms.
 
-## Acknowledgements
-
-Supported by the Finnish Ministry of Education and Culture's Pilot for Doctoral
-Programmes (Pilot project Mathematics of Sensing, Imaging and Modeling).
-Fabricated with the facilities of the Jamie Hyneman Center, LUT University,
-Lappeenranta.
-
 ## Safety
 
 This is a powered machine that stores mechanical energy in the specimen and the
