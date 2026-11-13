@@ -1,0 +1,45 @@
+{
+  "upload_type": "software",
+  "title": "RIGOR: Reconfigurable Electrically Actuated Testing Rig for Compressive Loading (design files, firmware and calibration data)",
+  "description": "<p>Open-hardware design files for RIGOR, an electromechanical rig that applies, holds, steps and cycles a commanded compressive force (0–90 kg) using closed-loop control on an in-line load cell. The measurement chain meets ISO 7500-1 class 1.</p><p>Contents: bill of materials, SolidWorks CAD and drawings, KiCad PCB project and gerbers, firmware for the control board (Arduino Nano ESP32) and the touchscreen (ESP32-S3, LVGL), the calibration workbook and data, the MATLAB analysis script, and assembly, wiring, operation and safety documentation.</p><p>Licences per part: hardware CERN-OHL-P-2.0, firmware and scripts MIT, documentation and data CC BY 4.0 (see LICENSE.md).</p>",
+  "creators": [
+    {
+      "name": "Alwis Weerasinghe, Sachintha",
+      "affiliation": "LUT University",
+      "orcid": "0009-0002-5026-1682"
+    },
+    {
+      "name": "Kłodowski, Adam",
+      "affiliation": "LAB University",
+      "orcid": "0000-0002-4965-5521"
+    },
+    {
+      "name": "Orzechowski, Grzegorz",
+      "affiliation": "LUT University",
+      "orcid": "0000-0002-3252-1236"
+    },
+    {
+      "name": "Mikkola, Aki",
+      "affiliation": "LUT University",
+      "orcid": "0000-0003-2762-8503"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "open hardware",
+    "force control",
+    "load cell",
+    "compression testing",
+    "ISO 7500-1",
+    "calibration",
+    "test rig"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sachinthaLUT/RIGOR",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ]
+}

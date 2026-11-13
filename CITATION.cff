@@ -20,7 +20,7 @@ authors:
     affiliation: "LUT University"
     orcid: "https://orcid.org/0000-0003-2762-8503"
 version: "1.0.0"
-date-released: "2026-11-30"   # set to the day you publish release v1.0.0
+date-released: "2026-11-13"
 license:
   - CERN-OHL-P-2.0
   - MIT
