@@ -26,7 +26,7 @@ license:
   - MIT
   - CC-BY-4.0
 repository-code: "https://github.com/sachinthaLUT/RIGOR"
-doi: "10.5281/zenodo.24194973"   # add after the first Zenodo release
+doi: "10.5281/zenodo.xxxxxx"   # add after the first Zenodo release
 keywords:
   - open hardware
   - force control
