@@ -9,7 +9,7 @@
 
 <p align="center">
   <!-- Replace XXXXXXX with the Zenodo DOI after the first release -->
-  <a href="https://doi.org/10.5281/zenodo.24194973"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.XXXXXXX-blue" alt="DOI"></a>
+  <a href="https://doi.org/10.5281/zenodo.24194973"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24194973-blue" alt="DOI"></a>
   <img src="https://img.shields.io/badge/hardware-CERN--OHL--P--2.0-green" alt="Hardware licence">
   <img src="https://img.shields.io/badge/firmware-MIT-green" alt="Firmware licence">
   <img src="https://img.shields.io/badge/docs-CC--BY--4.0-green" alt="Documentation licence">
