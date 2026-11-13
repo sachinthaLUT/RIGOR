@@ -89,10 +89,6 @@ If you use RIGOR or its data, please cite the paper and this repository.
 Citation metadata is in [`CITATION.cff`](CITATION.cff) (GitHub shows a
 "Cite this repository" button for it).
 
-> Alwis Weerasinghe, S., Kłodowski, A., Orzechowski, G., Mikkola, A.
-> *RIGOR: Reconfigurable Electrically Actuated Testing Rig for Compressive
-> Loading.* Submitted, 2026.
-
 ## Licence
 
 | Part | Licence |
